@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		.sheep {
+			background-image: url(sheep.png);
+			width: 100px;
+			height: 130px;
+			background-size: 100%;
+			position: absolute;
+			left: 1700px;
+			top: 450px;
+			transition: 1.5s;
+		}
+		.pscheno {
+			background-image: url(1.png);
+			width: 150px;
+			height: 150px;
+			background-size: 100%;
+			position: absolute;
+			left: 200px;
+			top: 450px;
+			transition: 0.5s;
+		}
+	</style>
+</head>
+<body style="background-image: url(1.jpg);background-repeat: no-repeat;background-size: 100%;">
+	<div style="" class="pscheno"></div>
+	<div style=""  onclick = "move()" class="sheep">
+	</div>
+
+<script type="text/javascript">
+	
+	 let sheep = document.querySelector(".sheep")
+	 let x = document.querySelector(".pscheno")
+	 let left = 1700
+
+	function move() {
+		left = left - 100
+		sheep.style.left = left + "px"
+
+	}
+	function off(){
+		x.style.display = "none"
+	}
+
+	setInterval(move,300)
+
+	setTimeout(off,5000)
+
+</script>
+	
+</body>
+</html>
+
